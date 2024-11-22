@@ -1,0 +1,19 @@
+:root{
+    --cor-secundaria-1: #9303a6;
+    --cor-secudaria-1: #8C0375;
+    --cor-hover: #C004D9;
+    --cor-principal: #5D04D9;
+    --cor-detalhe: #03318C;
+}
+
+body{
+ margin: 0;
+ padding: 0;
+}
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
