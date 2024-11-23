@@ -10,10 +10,180 @@ body{
  margin: 0;
  padding: 0;
 }
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 6.875rem 4.375rem;
+}
 
+/*-------------------------- Fontes -------------------------*/
 .press-start-2p-regular {
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
     font-style: normal;
   }
-  
+  .ibm-plex-mono-thin {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+/*--------------------------- Logo -----------------------------*/
+.logo__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 23.375rem;
+    height: 3.5rem;
+}
+.logo__titulo{
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+
+/*--------------------------- Cabecalho -----------------------*/
+.cabecalho{
+    background-color: var(--cor-principal);
+    justify-items: center;
+    padding: 1.25rem 0rem;
+}
+
+/*--------------------------- Produtos -----------------------*/
+.produtos{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Press Start 2P', system-ui;
+    align-items: center;
+}
+.produtos__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 42.375rem;
+    height: 60.688rem;
+    margin: 1rem;
+    box-shadow: -12px 10px 5.8px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.card{
+    background-color: var(--cor-principal);
+    font-family: 'IBM Plex Mono', serif;
+    color: white;
+    width: 12.25rem;
+    height: 16.125rem;
+    margin: 1rem 0.5rem;
+    border: 0.188rem solid black;
+    box-shadow: -5px 6px 3.3px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 0.625rem;
+    justify-items: center;
+    
+}
+.card img{
+    margin-top: 0.5rem;
+}
+
+.card-container--info{
+    justify-self: flex-start;
+    margin: 1rem;
+}
+.card-container--info p{
+    margin: 0;
+}
+.card-container--value{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 10.8rem;
+    height: 1.5rem;
+}
+.card__excluir{
+    background-color: transparent;
+    border: none;
+}
+.card__excluir img:hover{
+    filter: brightness(0.5) sepia(1) hue-rotate(180deg);
+}
+/*----------------------------- Formulario ---------------------------*/
+
+.adicionar-produto{
+    display: flex;
+    flex-direction: column;
+    width: 29.5rem;
+    height: 32.313rem;
+    gap: 2.5rem;
+    text-align: center;
+}
+.adicionar-produto__titulo{
+    font-family: 'Press Start 2P', system-ui;
+    width: 24.5rem;
+    height: 3rem;
+    align-self: center;
+}
+
+.formulario{
+    font-family: 'IBM Plex Mono', serif;
+}
+.formulario__campo{
+    width: 24.5rem;
+    height: 3.625rem;
+    border-radius: 1.875rem;
+    border: var(--cor-detalhe) 3px solid;
+    margin: 2.5rem 0rem;
+}
+.formulario__campo::placeholder{
+    color: var(--cor-detalhe);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.botao__container{
+    display: flex;
+    flex-direction: row;
+    width: 24.5rem;
+    height: 3.438rem;
+    justify-content: space-between;
+    justify-self: center;
+}
+.formulario__botao{
+    width: 11.75rem;
+    height: 3.438rem;
+    border-radius: 0.938rem;
+    border: none;
+    background-color: var(--cor-detalhe);
+    font-family: 'IBM Plex Mono', serif;
+    font-weight: 600;
+    color: white;
+    font-size: 1rem;
+}
+
+.formulario__botao:nth-child(2){
+    color: var(--cor-detalhe);
+    border: var(--cor-detalhe) solid;
+    background-color: transparent;
+    
+}
+
+/*------------------------------------------- Rodape ---------------------------------------------*/
+
+.rodape{
+    background-color: var(--cor-principal);
+    justify-items: center;
+    font-family: 'IBM Plex Mono', serif;
+    font-size: 1rem;
+    color: white;
+    height: 14.5rem;
+    padding-top: 4rem;
+}
+.rodape__desenvolvedor{
+    
+}
+.rodape__detalhe{
+    font-weight: 200;
+}
