@@ -1,0 +1,16 @@
+{
+  "produtos": [
+    {
+      "nome": "a",
+      "valor": "a",
+      "imagem": "a",
+      "id": 1
+    },
+    {
+      "nome": "a",
+      "valor": "a",
+      "imagem": "a",
+      "id": 2
+    }
+  ]
+}
