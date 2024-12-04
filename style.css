@@ -83,8 +83,11 @@ main{
     justify-items: center;
     
 }
-.card img{
+.card__produto{
+    border: 0.188rem solid black;
     margin-top: 0.5rem;
+    max-width:11rem;
+    height: 10.875rem;
 }
 
 .card-container--info{
@@ -103,11 +106,19 @@ main{
     height: 1.5rem;
 }
 .card__excluir{
+    display: inline-block;
+    cursor: pointer;
+    pointer-events: all;
+    max-width: 100%;
+    padding: 0;
     background-color: transparent;
     border: none;
 }
-.card__excluir img:hover{
-    filter: brightness(0.5) sepia(1) hue-rotate(180deg);
+.card__excluir img{
+    pointer-events: none;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 /*----------------------------- Formulario ---------------------------*/
 

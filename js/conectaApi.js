@@ -1,7 +1,7 @@
 async function listaCards() {
     const conexao = await fetch("http://localhost:3000/produtos");
     const conexaoConvertida = await conexao.json();
-    console.log(conexao.status)
+    
     return conexaoConvertida;
 }
 
@@ -30,7 +30,23 @@ async function criaCard(nome, valor, imagem) {
     }
 }
 
+async function deletaCard(id) {
+    
+    try{
+        const conexao = await fetch(`http://localhost:3000/produtos/${id}`,{
+        method: "DELETE"
+        });
+
+        const conexaoConvertida = await conexao.json();
+        return conexaoConvertida;
+    } catch(erro){
+        console.error("Erro ao excluir o card:", erro);
+    }
+
+}
+
 export const conectaApi = {
     listaCards,
-    criaCard
+    criaCard,
+    deletaCard
 }
