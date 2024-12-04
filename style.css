@@ -147,6 +147,11 @@ main{
     border: var(--cor-detalhe) 3px solid;
     margin: 2.5rem 0rem;
 }
+.formulario__campo:hover{
+    border: var(--cor-secundaria-1) 3px solid;
+    outline-color: var(--cor-secundaria-1);
+}
+
 .formulario__campo::placeholder{
     color: var(--cor-detalhe);
     font-weight: 600;
@@ -174,11 +179,20 @@ main{
     font-size: 1rem;
 }
 
+.formulario__botao:hover{
+    background-color: var(--cor-secundaria-1);
+}
+
 .formulario__botao:nth-child(2){
     color: var(--cor-detalhe);
     border: var(--cor-detalhe) solid;
     background-color: transparent;
     
+}
+
+.formulario__botao:nth-child(2):hover{
+    color:  var(--cor-secundaria-1);
+    border: var(--cor-secundaria-1) solid;
 }
 
 /*------------------------------------------- Rodape ---------------------------------------------*/

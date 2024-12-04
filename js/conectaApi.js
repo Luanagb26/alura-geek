@@ -44,6 +44,11 @@ async function deletaCard(id) {
     }
 
 }
+async function limparCampo(nome, valor, imagem) {
+    const conexao = await fetch("http://localhost:3000/produtos")
+    const conexaoConvertida = await conexao.json();
+    return conexaoConvertida;
+}   
 
 export const conectaApi = {
     listaCards,
