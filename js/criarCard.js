@@ -11,6 +11,7 @@ async function criarCard(evento) {
     
     await conectaApi.criaCard(nome,valor,imagem);
 
+    location.reload();
 
 }
 
