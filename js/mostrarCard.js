@@ -21,10 +21,20 @@ function constroiCard(nome, valor, imagem, id){
 
 async function listarCards() {
     try{
-    const listaApi = await conectaApi.listaCards();
-    listaApi.forEach(elemento => lista.appendChild(
-        constroiCard(elemento.nome, elemento.valor, elemento.imagem, elemento.id)
-    ));
+        const listaApi = await conectaApi.listaCards();
+
+        if (listaApi.length === 0) {
+            // Adiciona a mensagem ao invés dos cards
+            const mensagem = document.createElement("p");
+            mensagem.className = "mensagem-vazia";
+            mensagem.textContent = "Nenhum produto a ser exibido";
+            lista.appendChild(mensagem);}
+            else{
+                listaApi.forEach(elemento => lista.appendChild(
+                    constroiCard(elemento.nome, elemento.valor, elemento.imagem, elemento.id)
+                ));
+            }
+   
     } catch(erro){
         console.error('Erro ao processar a resposta: ', erro);
     }

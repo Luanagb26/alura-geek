@@ -15,6 +15,7 @@ main{
     flex-direction: row;
     justify-content: center;
     margin: 6.875rem 4.375rem;
+    max-width: 100%;
 }
 
 /*-------------------------- Fontes -------------------------*/
@@ -67,9 +68,35 @@ main{
     height: 60.688rem;
     margin: 1rem;
     box-shadow: -12px 10px 5.8px 0px rgba(0, 0, 0, 0.25);
-
+    overflow-y: scroll;
+}
+/*--------------------------- Scrollbar ----------------------*/
+.produtos__container::-webkit-scrollbar{
+    width: 8px;
 }
 
+/* Fundo da scrollbar */
+.produtos__container::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+  }
+  
+/* Barra de rolagem em si */
+.produtos__container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cor da barra */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 2px solid #f0f0f0; /* Espessura do espaço interno */
+    height: 50px;
+}
+  
+.produtos__container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cor mais escura ao passar o mouse */
+  }
+  
+.produtos__container::-webkit-scrollbar-button {
+    display: none;
+  }
+/*-------------------------------------------------------------*/
 .card{
     background-color: var(--cor-principal);
     font-family: 'IBM Plex Mono', serif;
@@ -211,4 +238,43 @@ main{
 }
 .rodape__detalhe{
     font-weight: 200;
+}
+
+/*---------------------------------------------- Versoes para telas menores ---------------------------*/
+
+@media screen and (max-width:430px) {
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 1rem;
+    }
+    
+    .formulario__campo{
+        max-width: 100%;
+    }
+    .produtos{
+        margin-top: 10rem;
+    }
+    .produtos h1{
+        max-width: 100%;
+    }
+    .produtos__container{
+        display: grid;
+        gap: 0;
+        grid-template-columns: repeat(2,1fr);
+        max-width: 100%;
+        height: auto;
+        justify-content: center;
+        margin: 0rem;
+        box-shadow: none;
+        overflow: initial;
+       
+    }
+    .card{
+        
+    }
+
+    .adicionar-produto{
+        max-width: 100%;
+    }
 }

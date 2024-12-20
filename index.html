@@ -31,9 +31,9 @@
         <section class="adicionar-produto" id="adicionar-produto">
             <h1 class="adicionar-produto__titulo">ADICIONAR PRODUTO:</h1>
             <form class="formulario" id="formulario" data-formulario >
-                <input class="formulario__campo" placeholder="nome . . ." data-nome>
-                <input class="formulario__campo" placeholder="valor . . ." data-valor>
-                <input class="formulario__campo" placeholder="URL da imagem . . ." data-imagem>
+                <input class="formulario__campo" placeholder="nome . . ." data-nome required>
+                <input class="formulario__campo" placeholder="valor . . ." data-valor type="number" min="0" step="0.01" required>
+                <input class="formulario__campo" placeholder="URL da imagem . . ." data-imagem type="url" required>
                 <div class="botao__container">
                     <input class="formulario__botao" type="submit" value="Guardar">
                     <input class="formulario__botao"type="button" id="botao_limpar" value="Limpar">

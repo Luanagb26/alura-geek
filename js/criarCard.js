@@ -11,7 +11,6 @@ async function criarCard(evento) {
     
     await conectaApi.criaCard(nome,valor,imagem);
 
-     //window.location.href = "../pages/envio-concluido.html";
 
 }
 
