@@ -20,8 +20,6 @@ async function criaCard(nome, valor, imagem) {
         
     });
 
-    console.error("Erro ao criar o card:", erro);
-
     const conexaoConvertida = await conexao.json();
     return conexaoConvertida;
     
